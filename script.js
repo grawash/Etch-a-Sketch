@@ -2,6 +2,7 @@ const mainContainer = document.querySelector(".centerDiv");
 let container = document.querySelector(".container");
 const select = document.querySelector("select");
 let grid = document.querySelector("select").value;
+const btn = document.querySelector(".btn");
 console.log(grid);
 //creates horizontal divs inside container
 function createDiv (){
@@ -34,7 +35,7 @@ for(let i=0;i<grid;i++){
     createDiv(grid);
 }
 //creates new grid when selecting grid size
-select.addEventListener('click', () =>{
+function createNewDiv(){
     removeDiv();
     container = document.createElement("div");
     container.setAttribute("style", "width:800px;height: 800px;border: 2px black solid;display: flex;flex-direction: column;")
@@ -43,5 +44,7 @@ select.addEventListener('click', () =>{
     for(let i=0;i<grid;i++){
         createDiv();
     }
-})
-let newDiv = document.querySelectorAll(".newDiv");
+}
+select.addEventListener('click', createNewDiv);
+btn.addEventListener('click', createNewDiv);
+
