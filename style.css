@@ -1,0 +1,13 @@
+.centerDiv{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width:800px;
+    height: 800px;
+    border: 2px black solid;
+    display: flex;
+    flex-direction: column;
+    flex:1 1 0;
+}
